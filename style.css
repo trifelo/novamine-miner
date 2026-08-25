@@ -4,81 +4,218 @@
   padding: 0;
 }
 
+:root {
+  --primary: #111111;
+  --background: #f4f7fb;
+  --card: #ffffff;
+  --text: #222222;
+  --muted: #777777;
+  --border: #e5e7eb;
+}
+
 body {
   font-family: Arial, sans-serif;
-  background: #f4f7fb;
-  color: #222;
-}
-
-.app {
-  max-width: 500px;
-  margin: auto;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.logo {
-  font-size: 60px;
-  margin-bottom: 10px;
-}
-
-h1 {
-  font-size: 32px;
-  margin-bottom: 5px;
-}
-
-.subtitle {
-  color: #777;
-  margin-bottom: 30px;
-}
-
-.card {
-  background: #ffffff;
-  padding: 25px;
-  border-radius: 20px;
-
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-}
-
-.welcome {
-  font-size: 18px;
-  margin-bottom: 25px;
-}
-
-.balance-box {
-  background: #f1f5f9;
-  padding: 20px;
-  border-radius: 15px;
-  margin-bottom: 25px;
-}
-
-.balance-label {
-  display: block;
-  font-size: 14px;
-  color: #777;
-  margin-bottom: 8px;
-}
-
-.balance-box h2 {
-  font-size: 30px;
+  background: var(--background);
+  color: var(--text);
 }
 
 button {
+  font-family: inherit;
+}
+
+.app {
   width: 100%;
-  padding: 16px;
+  max-width: 600px;
+  min-height: 100vh;
+  margin: auto;
+  padding-bottom: 90px;
+}
+
+
+/* HEADER */
+
+.header {
+  background: var(--card);
+  padding: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-icon {
+  font-size: 35px;
+}
+
+.brand h1 {
+  font-size: 22px;
+}
+
+.brand p {
+  margin-top: 3px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+
+/* CONTENT */
+
+.content {
+  padding: 20px;
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+.page-title {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+
+/* WELCOME */
+
+.welcome-box {
+  margin-bottom: 20px;
+}
+
+.welcome-box p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.welcome-box h2 {
+  margin-top: 5px;
+  font-size: 24px;
+}
+
+
+/* CARD */
+
+.card {
+  background: var(--card);
+  border-radius: 18px;
+  padding: 20px;
+  margin-bottom: 18px;
+  border: 1px solid var(--border);
+}
+
+.card-label {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.balance-card h2 {
+  margin-top: 12px;
+  font-size: 36px;
+}
+
+.balance-card small {
+  font-size: 16px;
+  color: var(--muted);
+}
+
+.rupiah-value {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+
+/* PACKAGE */
+
+.card-title {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.package-status strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.package-status p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* BUTTON */
+
+.primary-button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px;
 
   border: none;
   border-radius: 12px;
 
-  background: #111111;
+  background: var(--primary);
   color: white;
 
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bold;
 
   cursor: pointer;
 }
 
-button:active {
-  transform: scale(0.98);
+
+/* BOTTOM NAVIGATION */
+
+.bottom-nav {
+  position: fixed;
+
+  bottom: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 100%;
+  max-width: 600px;
+
+  background: white;
+
+  display: flex;
+  justify-content: space-around;
+
+  padding: 10px 5px;
+
+  border-top: 1px solid var(--border);
+}
+
+.nav-item {
+  border: none;
+  background: transparent;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 4px;
+
+  color: var(--muted);
+
+  cursor: pointer;
+}
+
+.nav-item span {
+  font-size: 20px;
+}
+
+.nav-item small {
+  font-size: 11px;
+}
+
+.nav-item.active {
+  color: var(--primary);
+  font-weight: bold;
 }
