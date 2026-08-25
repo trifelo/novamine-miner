@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
   <title>NovaMine Miner</title>
 
   <link rel="stylesheet" href="style.css">
 
-  <!-- Telegram Web App -->
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 
@@ -17,39 +17,224 @@
 
   <div class="app">
 
-    <div class="logo">
-      ⛏️
-    </div>
+    <!-- HEADER -->
+    <header class="header">
 
-    <h1>NovaMine</h1>
+      <div class="brand">
 
-    <p class="subtitle">
-      Virtual Mining & Rewards
-    </p>
+        <div class="brand-icon">
+          ⛏️
+        </div>
 
-    <div class="card">
+        <div>
+          <h1>NovaMine</h1>
 
-      <p class="welcome">
-        Halo, <span id="username">Miner</span> 👋
-      </p>
-
-      <div class="balance-box">
-
-        <span class="balance-label">
-          Saldo NVM
-        </span>
-
-        <h2>
-          <span id="balance">0</span> NVM
-        </h2>
+          <p>
+            Virtual Mining & Rewards
+          </p>
+        </div>
 
       </div>
 
-      <button id="openButton">
-        🚀 Mulai NovaMine
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+
+      <!-- HOME PAGE -->
+      <section class="page active" id="home">
+
+        <div class="welcome-box">
+
+          <p>Halo,</p>
+
+          <h2>
+            <span id="username">Miner</span> 👋
+          </h2>
+
+        </div>
+
+
+        <!-- BALANCE -->
+        <div class="card balance-card">
+
+          <span class="card-label">
+            💰 SALDO NVM
+          </span>
+
+          <h2>
+            <span id="balance">0</span>
+            <small>NVM</small>
+          </h2>
+
+          <p class="rupiah-value">
+            ≈ Rp0
+          </p>
+
+        </div>
+
+
+        <!-- PACKAGE -->
+        <div class="card">
+
+          <div class="card-title">
+
+            <span>⛏️ Paket Mining</span>
+
+          </div>
+
+          <div class="package-status">
+
+            <strong>
+              Belum memiliki paket
+            </strong>
+
+            <p>
+              Pilih paket untuk mulai mendapatkan
+              reward NVM setiap hari.
+            </p>
+
+          </div>
+
+          <button class="primary-button"
+                  data-page="mining">
+
+            🚀 Pilih Paket Mining
+
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- MINING PAGE -->
+      <section class="page" id="mining">
+
+        <h2 class="page-title">
+          ⛏️ Mining Package
+        </h2>
+
+        <div class="card">
+
+          <p>
+            Daftar paket mining NovaMine akan
+            ditampilkan di sini.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- TASK PAGE -->
+      <section class="page" id="task">
+
+        <h2 class="page-title">
+          🎁 Task & Reward
+        </h2>
+
+        <div class="card">
+
+          <p>
+            Tugas dan bonus NVM akan tersedia
+            di halaman ini.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- REFERRAL PAGE -->
+      <section class="page" id="referral">
+
+        <h2 class="page-title">
+          👥 Referral
+        </h2>
+
+        <div class="card">
+
+          <p>
+            Undang teman dan dapatkan bonus
+            referral.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- MORE PAGE -->
+      <section class="page" id="more">
+
+        <h2 class="page-title">
+          ☰ Menu
+        </h2>
+
+        <div class="card">
+
+          <p>
+            Menu Withdraw, Toko, dan fitur lainnya
+            akan ditambahkan di sini.
+          </p>
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <!-- BOTTOM NAVIGATION -->
+    <nav class="bottom-nav">
+
+      <button class="nav-item active"
+              data-page="home">
+
+        <span>🏠</span>
+        <small>Home</small>
+
       </button>
 
-    </div>
+
+      <button class="nav-item"
+              data-page="mining">
+
+        <span>⛏️</span>
+        <small>Mining</small>
+
+      </button>
+
+
+      <button class="nav-item"
+              data-page="task">
+
+        <span>🎁</span>
+        <small>Task</small>
+
+      </button>
+
+
+      <button class="nav-item"
+              data-page="referral">
+
+        <span>👥</span>
+        <small>Referral</small>
+
+      </button>
+
+
+      <button class="nav-item"
+              data-page="more">
+
+        <span>☰</span>
+        <small>Menu</small>
+
+      </button>
+
+    </nav>
 
   </div>
 
