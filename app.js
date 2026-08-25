@@ -110,3 +110,33 @@ if (miningButton) {
   );
 
 }
+
+/* =========================
+   PACKAGE SELECTION
+========================= */
+
+const packageButtons =
+  document.querySelectorAll(".package-button");
+
+
+packageButtons.forEach(function (button) {
+
+  button.addEventListener(
+    "click",
+
+    function () {
+
+      const selectedPackage =
+        this.dataset.package;
+
+      alert(
+        "Paket " +
+        selectedPackage.toUpperCase() +
+        " dipilih."
+      );
+
+    }
+
+  );
+
+});
