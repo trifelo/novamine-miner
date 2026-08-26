@@ -1,3 +1,10 @@
+/* =========================
+   NOVAMINE API
+========================= */
+
+const API_BASE_URL =
+  "https://novamine-api-production-c742.up.railway.app";
+
 const tg = window.Telegram.WebApp;
 
 tg.expand();
