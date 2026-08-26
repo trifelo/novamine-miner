@@ -489,3 +489,40 @@ if (miningButton) {
 ========================= */
 
 renderPackages();
+
+/* =========================
+   API CONNECTION TEST
+========================= */
+
+async function testNovaMineAPI() {
+
+  try {
+
+    const response =
+      await fetch(
+        API_BASE_URL + "/api/test"
+      );
+
+
+    const data =
+      await response.json();
+
+
+    console.log(
+      "NovaMine API:",
+      data
+    );
+
+
+  } catch (error) {
+
+    console.error(
+      "NovaMine API Error:",
+      error
+    );
+
+  }
+
+}
+
+testNovaMineAPI();
