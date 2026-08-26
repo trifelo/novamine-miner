@@ -338,3 +338,231 @@ button {
 .premium-package {
   border-width: 2px;
 }
+
+/* =========================
+   PACKAGE DETAIL
+========================= */
+
+.package-detail {
+  display: none;
+}
+
+.package-detail.active {
+  display: block;
+}
+
+#packageList.hidden {
+  display: none;
+}
+
+
+/* BACK BUTTON */
+
+.back-button {
+  border: none;
+
+  background: transparent;
+
+  color: var(--primary);
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+  padding: 5px 0 15px;
+
+  cursor: pointer;
+}
+
+
+/* DETAIL CARD */
+
+.detail-card {
+  background: var(--card);
+
+  border: 1px solid var(--border);
+
+  border-radius: 18px;
+
+  padding: 20px;
+}
+
+
+.detail-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 25px;
+}
+
+
+.detail-header h2 {
+  font-size: 25px;
+}
+
+
+/* PRICE */
+
+.detail-price {
+  background: #f8fafc;
+
+  border-radius: 14px;
+
+  padding: 20px;
+
+  margin-bottom: 20px;
+}
+
+
+.detail-price-label {
+  display: block;
+
+  color: var(--muted);
+
+  font-size: 13px;
+
+  margin-bottom: 8px;
+}
+
+
+.detail-price strong {
+  font-size: 30px;
+}
+
+
+/* INFO */
+
+.detail-info {
+  border-top: 1px solid var(--border);
+
+  border-bottom: 1px solid var(--border);
+
+  margin-bottom: 20px;
+}
+
+
+.info-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 15px 0;
+
+  border-bottom: 1px solid var(--border);
+
+  font-size: 14px;
+}
+
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+
+.info-row span {
+  color: var(--muted);
+}
+
+
+.info-row strong {
+  text-align: right;
+}
+
+
+/* DESCRIPTION */
+
+.detail-description {
+  margin-bottom: 25px;
+}
+
+
+.detail-description strong {
+  display: block;
+
+  margin-bottom: 8px;
+}
+
+
+.detail-description p {
+  color: var(--muted);
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* PAYMENT */
+
+.payment-section h3 {
+  font-size: 18px;
+
+  margin-bottom: 15px;
+}
+
+
+.payment-button {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 15px;
+
+  margin-bottom: 10px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 13px;
+
+  background: white;
+
+  cursor: pointer;
+
+  text-align: left;
+}
+
+
+.payment-button:active {
+  transform: scale(0.98);
+}
+
+
+.payment-icon {
+  font-size: 24px;
+
+  width: 35px;
+
+  text-align: center;
+}
+
+
+.payment-text {
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+
+.payment-text strong {
+  font-size: 14px;
+}
+
+
+.payment-text small {
+  color: var(--muted);
+
+  font-size: 11px;
+}
